@@ -184,6 +184,14 @@ public class CYK_Classes {
         logger.trace("Elemző táblázat kiírva!");
         return vizsg;
     }
+
+    /**
+     * Method for writing in the source json file.
+     *
+     * @param be Word to write
+     * @return Whether the writing was successful or not
+     * @throws FileNotFoundException if file does not exist
+     */
     public static String WriteToJson(String be) throws FileNotFoundException {
         Gson gson = new Gson();
         String path = FileSystemView.getFileSystemView().getDefaultDirectory().getPath() + File.separator + "cyk" + File.separator + "szavak.json";
